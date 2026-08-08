@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Weird Stuff</title>
+            <link rel="stylesheet" href="CSS-for-dumi_bum/dumi_bum.css">
+        <body>
+            <!-- Home Icon -->
+            <a href="dumi_bum.html">
+                <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+            </a>
+            <h1>Weird Stuff</h1>
+            <hr>
+            <h2>Left click to see the background change color!</h2>
+            <h2>Marquee</h2>
+            <marquee behavior="scroll" direction="right">This is moving text using marquee!</marquee>
+            <br><br><br>
+            <marquee behavior="alternate" direction="right">I WILL BOUNCE!</marquee>
+            <h2>BDO</h2>
+            <bdo dir="rtl">REVERSED TEXT????</bdo>
+            <p>Use Ctrl+U to see the code and it is true! The code is on line 21. It should say:
+            <br><b>&lt;bdo dir="rtl"&gt;REVERSED TEXT????&lt;/bdo&gt;</b><br>
+            To return use Ctrl+W.</p>
+            <h2>Hidden Surprise</h2>
+            <details>
+                <summary>Click to reveal a surprise!</summary>
+                <p>Surprise! You found the hidden message!</p>
+                <p>Here's a fun fact: Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3000 years old and still perfectly edible!</p>  
+            </details>
+            <h2>BEWARE OF BLINKING TEXT</h2>
+            <p id="blinking">I AM BLINKING!</p>
+            <script>
+                setInterval(() => {
+                    const text = document.getElementById("blinking");
+                    text.style.visibility = text.style.visibility === "hidden" ? "visible" : "hidden";
+                }, 500);
+            </script>
+            <h2>Ruby</h2>
+            <ruby>अश्विन<rt>Ashwin</rt></ruby>
+            <br><br>
+            <p style="transform: rotate(180deg);">I AM UPSIDE DOWN!🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯🤯</p>
+            <span id="typing"></span>
+            <script>
+                const text = "Typing Effect in Action!";
+                let i = 0;
+                function type() {
+                    if (i < text.length) {
+                        document.getElementById("typing").textContent += text[i];
+                        i++;
+                        setTimeout(type, 80);
+                    }
+                }
+                type();
+            </script>
+            <p style="color: red; text-shadow: 0 0 10px #480876;">I AM GLOWING!</p>
+            <p id="disappear">I will disappear soon... hope you have a good day!!!</p>
+            <script>
+                setTimeout(() => { document.getElementById("disappear").style.display = "none"; }, 5000);
+            </script>
+            <h2>Spinning Text</h2>
+            <br><br>
+            <p style="display:inline-block; animation:spin 2s linear infinite;">I AM SPINNING!</p>
+            <style>
+                @keyframes spin { 
+                    from { transform: rotate(0deg); } 
+                    to { transform: rotate(360deg); } 
+                }
+            </style>
+            <style>
+                @keyframes glitch {
+                    0% { text-shadow: 2px 2px red; }
+                    25% { text-shadow: -2px -2px blue; }
+                    50% { text-shadow: 2px 2px #00ff00; }
+                    75% { text-shadow: -2px -2px yellow; }
+                    100% { text-shadow: 2px 2px magenta; }
+                }
+
+                .glitch-text {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    color: white;
+                    text-transform: uppercase;
+                    animation: glitch 0.2s infinite alternate;
+                }
+            </style>
+            <br><br>
+            <h2>Glitch Text</h2>
+            <br><br>
+            <details>
+                <summary>Click to see the glitch effect!</summary>
+            <p class="glitch-text">I am glitching!</p>
+            </details>
+            <script>
+                function randomColor() {
+                    let r = Math.floor(Math.random() * 256);
+                    let g = Math.floor(Math.random() * 256);
+                    let b = Math.floor(Math.random() * 256);
+            
+                    // Set background color
+                    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            
+                    // Calculate inverse color for text
+                    let invertedR = 255 - r;
+                    let invertedG = 255 - g;
+                    let invertedB = 255 - b;
+                    
+                    document.body.style.color = `rgb(${invertedR}, ${invertedG}, ${invertedB})`;
+                }
+            
+                window.onclick = randomColor;
+            </script>
+            <br><br>
+            <div class="eye"></div>
+            <style>
+                .eye {
+                    width: 50px;
+                    height: 50px;
+                    background: radial-gradient(circle, white 30%, black 70%);
+                    position: absolute;
+                    border-radius: 50%;
+                }
+            </style>
+            <script>
+                document.addEventListener("mousemove", function(event) {
+                    document.querySelector(".eye").style.left = event.pageX + "px";
+                    document.querySelector(".eye").style.top = event.pageY + "px";
+                });
+            </script>
+            <p style="animation: rainbow 3s infinite;">I AM COLORFUL!</p>
+            <style>
+                @keyframes rainbow { 
+                    0% { color: red; } 
+                    20% { color: orange; } 
+                    40% { color: yellow; } 
+                    60% { color: green; } 
+                    80% { color: blue; } 
+                    100% { color: purple; }
+                }
+            </style>
+            <p style="display:inline-block; animation: shrink 3s infinite;">I AM DISAPPEARING!</p>
+            <style>
+                @keyframes shrink {
+                    0% { transform: scale(1); } 
+                    50% { transform: scale(0.5); } 
+                    100% { transform: scale(1); }
+                }
+            </style>
+            <span id="reverseTyping"></span>
+            <button style="transition: 0.3s; font-size: 16px;"
+                onmouseover="this.style.transform='scale(200)';"
+                onmouseout="this.style.transform='scale(1)';">
+                DON'T HOVER OVER ME!
+            </button>
+            <p style="opacity: 0.02;">Hmm... I wonder: what if I press Ctrl+X???</p>
+            <p id="shrinkingText" style="font-size: 40px;">Click me and I get smaller!</p>
+            <script>
+                document.getElementById("shrinkingText").onclick = function() {
+                let size = parseInt(this.style.fontSize);
+                this.style.fontSize = (size - 5) + "px";
+            };
+            </script>
+            <br><br>
+            <a href="#" onclick="return false;">I am a link that does nothing! Click me!</a>
+            <script>
+                let secretShown = false;
+                let originalContent;
+
+                document.addEventListener("keydown", function(event) {
+                    if (event.ctrlKey && event.key === "x") {
+                        if (!secretShown) {
+                            originalContent = document.body.innerHTML;
+                            document.body.innerHTML = `
+                                <h1>YOU UNLOCKED A SECRET PAGE!</h1>
+                                <hr>
+                                <p>Congratulations! You found the secret page by pressing Ctrl+X!</p>
+                                <p>Press Ctrl+X again to go back.</p>
+                                <p>Here's a fun fact: Did you know that octopuses have three hearts and blue blood?</p>
+                                <p>Keep exploring and have fun!</p>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><p>Okay, seriously? Why did you have to come all the way here?</p>
+                                <p>Oh, because of the "keep exploring" message?</p>
+                                <p>Well, I guess you are right.</p>
+                                <p>But still, you could have just pressed Ctrl+X to go back to the previous page.</p>
+                                <p>Anyway, I hope you enjoyed this secret page!</p>
+                                <p>Have a gamazing day!</p>
+                                <p>And remember, keep exploring!</p>
+                                <p>See you next time!</p>
+                                <p style="opacity: 0.03">Hint: free space</p>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <p style="opacity: 0.02">Hint: free space with the button</p>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                <p style="opacity: 0.01">Hint: free space with the button by scrolling</p>
+                            `;
+                            secretShown = true;
+                        } else {
+                            document.body.innerHTML = originalContent;
+                            secretShown = false;
+                        }
+                    }
+                });
+            </script>
+        </body>
+    </html>

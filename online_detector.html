@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="CSS-for-dumi_bum/dumi_bum.css">
+            <title>Online Detector</title>
+        </head>
+        <body>
+            <h1>Online Detector</h1>
+            <hr>
+            <div id="status">Checking connection status...</div>
+            <script>
+                function isonline() {
+                    const statusElement = document.getElementById('status');
+                    if (statusElement) {
+                        statusElement.innerHTML = `<p>ONLINE!</p>`;
+                    }
+                }
+                function isoffline() {
+                    const statusElement = document.getElementById('status');
+                    if (statusElement) {
+                        statusElement.innerHTML = `<p>offline</p>`;
+                    }
+                }
+
+                window.addEventListener('offline', isoffline);
+                window.addEventListener('online', isonline);
+                // Check the initial connection status
+                if (navigator.onLine) {
+                    isonline();
+                } else {
+                    isoffline();
+                }
+            </script>
+        </body>
+    </html>

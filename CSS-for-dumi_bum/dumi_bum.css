@@ -1,0 +1,138 @@
+body {
+   font-family: 'Source Code Pro', monospace;
+}
+
+hr {
+    height: 3px;
+    background-color: #000000;
+    border: none;
+}
+
+a {
+    color: #0000FF;
+}
+
+a:hover {
+    color: #653196;
+}
+
+#post-it_bouncer {
+    width: 2.5%;
+}
+
+#altgr_image {
+    height: 250px;
+}
+
+#dumi_bum_image {
+    height: 125px;
+}
+
+/* Style for the home icon */
+.home-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    fill: #0000FF; /* Default color */
+    transition: fill 1.0s ease; /* Smooth color transition */
+}
+
+.home-icon:hover {
+    fill: #653196; /* Hover color */
+}
+
+.button-like {
+    background-color: #ffffff;
+    border: 2px solid gray;
+    color: black; /* Text color */
+    padding: 10px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+#post-it-bouncer-bg {
+    background-color: #85ffa5;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#85ffa5), to(#c3f7d1));
+}
+
+#dictionary-bg {
+    background-color: #ffa1a1;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#ffa1a1), to(#fcbbbb));
+}
+
+.law-bg {
+    background-color: #ffbd7a;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#ffbd7a), to(#ffd1a3));
+}
+
+#main-bg {
+    background-color: #85ffa5;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#85ffa5), to(#75acff));
+}
+
+.yumi_bum-bg {
+    background-color: #75acff;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#75acff), to(#a6c9ff));
+}
+
+.records-bg {
+    background-color: #ffbd7a;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#fff782), to(#fff9a1));
+}
+
+video {
+    border: 5px solid #000000;
+}
+
+nav {
+    background-color: white;
+    padding: 5px;
+    border: 3px solid #000000;
+}
+
+/* body {
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+h6 {
+    color: white;
+}
+
+ul {
+    color: white;
+}
+
+ol {
+    color: white;
+}
+
+hr {
+    color: white;
+}
+    
+.a {
+    color: #0000ff;
+}
+    
+.a:hover {
+    color: #653196;
+} */
